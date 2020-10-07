@@ -22,7 +22,7 @@ from RestAPI import runServer
 url = "rtsp://admin:admin@192.168.1.119:554/0"
 delta_t = 1.5 # uzmi frame svakih delta_t sekundi
 delay = 2 # kašnjenje strem-a
-board = pyfirmata.Arduino('COM3')
+#board = pyfirmata.Arduino('COM3')
 pin = 7 # [INT] broj pina na arduino ploči
 thresh = 127 #INT; 
 
@@ -88,7 +88,7 @@ def checkAndOpen(Qd):
             board.digital[pin].write(1)
             time.sleep(2)
             board.digital[pin].write(0)
-            time.sleep(18)
+            time.sleep(8)
             with Qd.mutex():
                 Qd.queue.clear()
 
