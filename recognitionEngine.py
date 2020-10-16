@@ -89,7 +89,7 @@ def checkAndOpen(Qd):
             time.sleep(2)
             board.digital[pin].write(0)
             time.sleep(8)
-            with Qd.mutex():
+            with Qd.mutex:
                 Qd.queue.clear()
 
      
